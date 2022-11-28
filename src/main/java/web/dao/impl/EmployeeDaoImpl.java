@@ -7,5 +7,4 @@ import web.model.Employee;
 
 @Repository
 public class EmployeeDaoImpl extends AbstrDaoImpl<Employee, Long> implements EmployeeDao {
-
 }

@@ -39,7 +39,7 @@ public abstract class AbstrDaoImpl<T,K> implements AbstrDao<T,K> {
     }
 
     @Override
-    public void delete(T obj) {
-        entityManager.remove(obj);
+    public void delete(K id) {
+        entityManager.remove(entityManager.find(typeClass, id));
     }
 }

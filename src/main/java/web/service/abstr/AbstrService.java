@@ -12,6 +12,6 @@ public interface AbstrService<T, K> {
 
     void update(T obj);
 
-    void delete(T obj);
+    void delete(K id);
 
 }

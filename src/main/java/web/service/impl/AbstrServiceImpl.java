@@ -46,7 +46,7 @@ public abstract class AbstrServiceImpl<T, K> implements AbstrService<T, K> {
 
     @Override
     @Transactional
-    public void delete(T obj) {
-        dao.delete(obj);
+    public void delete(K id) {
+        dao.delete(id);
     }
 }
