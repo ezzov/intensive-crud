@@ -15,4 +15,5 @@ public class EmployeeServiceImpl extends AbstrServiceImpl<Employee, Long> implem
     public EmployeeServiceImpl(EmployeeDao employeeDao) {
         super(employeeDao);
     }
+
 }

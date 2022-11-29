@@ -16,4 +16,5 @@ public class ProjectServiceImpl extends AbstrServiceImpl<Project, Long> implemen
     public ProjectServiceImpl(ProjectDao projectDao) {
         super(projectDao);
     }
+
 }

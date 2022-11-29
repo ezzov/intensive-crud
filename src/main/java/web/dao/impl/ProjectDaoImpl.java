@@ -6,4 +6,5 @@ import web.model.Project;
 
 @Repository
 public class ProjectDaoImpl extends AbstrDaoImpl<Project, Long> implements ProjectDao {
+
 }

@@ -20,4 +20,5 @@ public class Position {
         this.id = id;
         this.position = position;
     }
+
 }

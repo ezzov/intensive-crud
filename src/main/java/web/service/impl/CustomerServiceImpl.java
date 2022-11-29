@@ -14,4 +14,5 @@ public class CustomerServiceImpl extends AbstrServiceImpl<Customer, Long> implem
     public CustomerServiceImpl(CustomerDao customerDao) {
         super(customerDao);
     }
+
 }
