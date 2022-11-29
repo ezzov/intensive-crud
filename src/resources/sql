@@ -1,0 +1,41 @@
+CREATE TABLE IF NOT EXISTS emploees (
+  id        BIGINT PRIMARY KEY,
+  name      VARCHAR(30) NOT NULL,
+  lastname     VARCHAR(30) NOT NULL,
+  position_id BIGINT     NOT NULL,
+  FOREIGN KEY (position_id) REFERENCES positions (id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+) engine = InnoDB;
+
+CREATE TABLE IF NOT EXISTS positions (
+  id    BIGINT PRIMARY KEY,
+  position VARCHAR(30) NOT NULL,
+) engine = InnoDB;
+
+CREATE TABLE IF NOT EXISTS projects (
+  id        BIGINT PRIMARY KEY,
+  projectname      VARCHAR(60) NOT NULL,
+  customer_id BIGINT NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customers (id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+) engine = InnoDB;
+
+CREATE TABLE IF NOT EXISTS customers (
+  id        BIGINT PRIMARY KEY,
+  customername      VARCHAR(60) NOT NULL,
+) engine = InnoDB;
+
+CREATE TABLE IF NOT EXISTS emploees_projects (
+  emploee_id        BIGINT NOT NULL,
+  project_id        BIGINT NOT NULL,
+  primary key (emploee_id, project_id),
+  FOREIGN KEY (emploee_id) REFERENCES emploees (id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  FOREIGN KEY (project_id) REFERENCES projects (id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+) engine = InnoDB;
+
