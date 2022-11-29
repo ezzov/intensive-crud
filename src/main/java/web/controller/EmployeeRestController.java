@@ -10,7 +10,7 @@ import web.service.abstr.EmployeeService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/employees")
 @Api(tags = {"Данные о работниках"})
 public class EmployeeRestController {
 
@@ -22,28 +22,28 @@ public class EmployeeRestController {
     }
 
     @ApiOperation(value = "Список всех работников")
-    @GetMapping("/employees")
+    @GetMapping("/")
     public List<Employee> getAllEmployees() {
         return employeeService.getAll();
     }
 
     @ApiOperation(value = "Инфомация о работнике")
-    @GetMapping("/employees/{id}")
+    @GetMapping("/{id}")
     public Employee getEmployeeById(@PathVariable("id") Long id) {
         return employeeService.getById(id);}
 
     @ApiOperation(value = "Добавление нового работника")
-    @PostMapping("/employees")
+    @PostMapping("/")
     public void addEmployee(@RequestBody Employee employee) {
         employeeService.save(employee); }
 
     @ApiOperation(value = "Обновление работника")
-    @PatchMapping("/employees")
+    @PatchMapping("/")
     public void updateEmployee(@RequestBody Employee employee) {
         employeeService.update(employee); }
 
     @ApiOperation(value = "Удаление работника из базы данных")
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("/{id}")
     public void deleteEmployeeById(@PathVariable("id") Long id) {
         employeeService.delete(id); }
 }

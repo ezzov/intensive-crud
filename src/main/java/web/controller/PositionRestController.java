@@ -10,7 +10,7 @@ import web.service.abstr.PositionService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/positions")
 @Api(tags = {"Данные о позициях"})
 public class PositionRestController {
 
@@ -22,28 +22,28 @@ public class PositionRestController {
     }
 
     @ApiOperation(value = "Список всех позиций")
-    @GetMapping("/positions")
+    @GetMapping("/")
     public List<Position> getAllPositions() {
         return positionService.getAll();
     }
 
     @ApiOperation(value = "Инфомация о позиции")
-    @GetMapping("/positions/{id}")
+    @GetMapping("/{id}")
     public Position getPositionById(@PathVariable("id") Long id) {
         return positionService.getById(id);}
 
     @ApiOperation(value = "Добавление новой позиции")
-    @PostMapping("/positions")
+    @PostMapping("/")
     public void addPosition(@RequestBody Position position) {
         positionService.save(position); }
 
     @ApiOperation(value = "Обновление позиции")
-    @PatchMapping("/positions")
+    @PatchMapping("/")
     public void updatePosition(@RequestBody Position position) {
         positionService.update(position); }
 
     @ApiOperation(value = "Удаление позиции из базы данных")
-    @DeleteMapping("/positions/{id}")
+    @DeleteMapping("/{id}")
     public void deletePositionById(@PathVariable("id") Long id) {
         positionService.delete(id); }
 }

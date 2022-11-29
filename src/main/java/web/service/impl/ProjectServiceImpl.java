@@ -15,6 +15,5 @@ public class ProjectServiceImpl extends AbstrServiceImpl<Project, Long> implemen
     @Autowired
     public ProjectServiceImpl(ProjectDao projectDao) {
         super(projectDao);
-        this.projectDao = projectDao;
     }
 }

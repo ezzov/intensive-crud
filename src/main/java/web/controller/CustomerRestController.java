@@ -11,7 +11,7 @@ import web.service.abstr.CustomerService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/customers")
 @Api(tags = {"Данные о заказчиках"})
 public class CustomerRestController {
 
@@ -23,28 +23,28 @@ public class CustomerRestController {
     }
 
     @ApiOperation(value = "Список всех заказчиков")
-    @GetMapping("/customers")
+    @GetMapping("/")
     public List<Customer> getAllCustomers() {
         return customerService.getAll();
     }
 
     @ApiOperation(value = "Инфомация о заказчике")
-    @GetMapping("/customers/{id}")
+    @GetMapping("/{id}")
     public Customer getCustomerById(@PathVariable("id") Long id) {
         return customerService.getById(id);}
 
     @ApiOperation(value = "Добавление нового заказчика")
-    @PostMapping("/customers")
+    @PostMapping("/")
     public void addCustomer(@RequestBody Customer customer) {
         customerService.save(customer); }
 
     @ApiOperation(value = "Обновление заказчика")
-    @PatchMapping("/customers")
+    @PatchMapping("/")
     public void updateCustomer(@RequestBody Customer customer) {
         customerService.update(customer); }
 
     @ApiOperation(value = "Удаление заказчика из базы данных")
-    @DeleteMapping("/customers/{id}")
+    @DeleteMapping("/{id}")
     public void deleteCustomerById(@PathVariable("id") Long id) {
         customerService.delete(id); }
 }

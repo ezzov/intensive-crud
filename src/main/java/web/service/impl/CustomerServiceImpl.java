@@ -10,11 +10,8 @@ import web.service.abstr.CustomerService;
 @Service
 public class CustomerServiceImpl extends AbstrServiceImpl<Customer, Long> implements CustomerService {
 
-    private CustomerDao customerDao;
-
     @Autowired
     public CustomerServiceImpl(CustomerDao customerDao) {
         super(customerDao);
-        this.customerDao = customerDao;
     }
 }
