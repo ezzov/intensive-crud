@@ -17,4 +17,5 @@ public class ProjectServiceImpl extends AbstrServiceImpl<Project, Long> implemen
         super(projectDao);
         this.projectDao = projectDao;
     }
+
 }

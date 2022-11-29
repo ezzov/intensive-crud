@@ -6,4 +6,5 @@ import web.model.Customer;
 
 @Repository
 public class CustomerDaoImpl extends AbstrDaoImpl<Customer, Long> implements CustomerDao {
+
 }

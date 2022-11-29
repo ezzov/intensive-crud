@@ -17,4 +17,5 @@ public class CustomerServiceImpl extends AbstrServiceImpl<Customer, Long> implem
         super(customerDao);
         this.customerDao = customerDao;
     }
+
 }

@@ -13,4 +13,5 @@ public interface AbstrDao<T,K> {
     void update(T obj);
 
     void delete(K id);
+
 }

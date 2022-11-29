@@ -46,4 +46,5 @@ public class ProjectRestController {
     @DeleteMapping("/projects/{id}")
     public void deleteProjectById(@PathVariable("id") Long id) {
         projectService.delete(id); }
+
 }
