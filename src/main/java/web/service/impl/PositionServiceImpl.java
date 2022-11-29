@@ -18,4 +18,5 @@ public class PositionServiceImpl extends AbstrServiceImpl<Position, Long> implem
         super(positionDao);
         this.positionDao = positionDao;
     }
+
 }

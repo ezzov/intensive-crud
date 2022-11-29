@@ -49,4 +49,5 @@ public abstract class AbstrServiceImpl<T, K> implements AbstrService<T, K> {
     public void delete(K id) {
         dao.delete(id);
     }
+
 }

@@ -46,4 +46,5 @@ public class PositionRestController {
     @DeleteMapping("/positions/{id}")
     public void deletePositionById(@PathVariable("id") Long id) {
         positionService.delete(id); }
+
 }

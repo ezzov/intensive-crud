@@ -66,4 +66,5 @@ public class JpaConfig {
         transactionManager.setEntityManagerFactory(emf);
         return transactionManager;
     }
+
 }

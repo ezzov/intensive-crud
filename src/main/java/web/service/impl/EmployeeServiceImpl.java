@@ -17,4 +17,5 @@ public class EmployeeServiceImpl extends AbstrServiceImpl<Employee, Long> implem
         super(employeeDao);
         this.employeeDao = employeeDao;
     }
+
 }

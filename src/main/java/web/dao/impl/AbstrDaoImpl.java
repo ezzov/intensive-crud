@@ -42,4 +42,5 @@ public abstract class AbstrDaoImpl<T,K> implements AbstrDao<T,K> {
     public void delete(K id) {
         entityManager.remove(entityManager.find(typeClass, id));
     }
+
 }
